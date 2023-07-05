@@ -2,11 +2,12 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import DropdownMenu from "./Dropdown";
 import { Bars3Icon, BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+export const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
   const router = useRouter();
   const isActive = router.pathname === href;
 
@@ -38,6 +39,51 @@ export const Header = () => {
     <>
       <li>
         <NavLink href="/">Home</NavLink>
+      </li>
+      <li>
+        <DropdownMenu href="/about" title="About">
+          <NavLink href="/about/what-is-ninit">What is Ninit?</NavLink>
+          <NavLink href="/about/team">About the Team</NavLink>
+          <NavLink href="/about/projects">Projects</NavLink>
+          <NavLink href="/about/news">News+Community</NavLink>
+        </DropdownMenu>
+      </li>
+      <li>
+        <DropdownMenu href="/community" title="Community">
+          <a
+            href="https://discord.gg/your-server-invite-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "blue", textDecoration: "none", marginRight: 5 }}
+          >
+            Discord
+          </a>
+          <a
+            href="https://twitter.com/your-twitter-handle"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "blue", textDecoration: "none", marginRight: 5 }}
+          >
+            Twitter
+          </a>
+          <a
+            href="https://t.me/your-telegram-channel"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "blue", textDecoration: "none", marginRight: 5 }}
+          >
+            Telegram
+          </a>
+          <NavLink href="/community/events">Events</NavLink>
+        </DropdownMenu>
+      </li>
+      <li>
+        <DropdownMenu href="/resources" title="Resources">
+          <NavLink href="/resources/documentation">Documentation</NavLink>
+          <NavLink href="/resources/litepaper">Litepaper</NavLink>
+          <NavLink href="/resources/academy">Academy</NavLink>
+          <NavLink href="/resources/projects">Projects</NavLink>
+        </DropdownMenu>
       </li>
       <li>
         <NavLink href="/debug">
