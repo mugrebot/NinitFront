@@ -30,3 +30,27 @@ p {
 .btn.btn-ghost {
   @apply shadow-none;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: grid; 
+  place-items: center;
+  min-height: 80vh;
+}
+
+.hidden2 {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+}
+
+.show {
+  opacity: 1;
+  transition: all 1s;
+  filter: blur(0);
+
+}

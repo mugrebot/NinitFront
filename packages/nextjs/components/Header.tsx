@@ -37,75 +37,38 @@ export const Header = () => {
 
   const navLinks = (
     <>
-      <li>
-        <NavLink href="/">Home</NavLink>
-      </li>
-      <li>
-        <DropdownMenu href="/about" title="About">
-          <NavLink href="/about/what-is-ninit">What is Ninit?</NavLink>
-          <NavLink href="/about/team">About the Team</NavLink>
-          <NavLink href="/about/projects">Projects</NavLink>
-          <NavLink href="/about/news">News+Community</NavLink>
-        </DropdownMenu>
-      </li>
-      <li>
-        <DropdownMenu href="/community" title="Community">
-          <a
-            href="https://discord.gg/your-server-invite-link"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "blue", textDecoration: "none", marginRight: 5 }}
-          >
-            Discord
-          </a>
-          <a
-            href="https://twitter.com/your-twitter-handle"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "blue", textDecoration: "none", marginRight: 5 }}
-          >
-            Twitter
-          </a>
-          <a
-            href="https://t.me/your-telegram-channel"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "blue", textDecoration: "none", marginRight: 5 }}
-          >
-            Telegram
-          </a>
-          <NavLink href="/community/events">Events</NavLink>
-        </DropdownMenu>
-      </li>
-      <li>
-        <DropdownMenu href="/resources" title="Resources">
-          <NavLink href="/resources/documentation">Documentation</NavLink>
-          <NavLink href="/resources/litepaper">Litepaper</NavLink>
-          <NavLink href="/resources/academy">Academy</NavLink>
-          <NavLink href="/resources/projects">Projects</NavLink>
-        </DropdownMenu>
-      </li>
-      <li>
-        <NavLink href="/debug">
-          <BugAntIcon className="h-4 w-4" />
-          Debug Contracts
-        </NavLink>
-      </li>
-      <li>
-        <NavLink href="/example-ui">
-          <SparklesIcon className="h-4 w-4" />
-          Example UI
-        </NavLink>
-      </li>
-      <li>
-        <NavLink href="/blockexplorer">
-          <MagnifyingGlassIcon className="h-4 w-4" />
-          Block Explorer
-        </NavLink>
-      </li>
+    <li>
+          <NavLink href="/">Home</NavLink>
+        </li>
+        <li>
+          <DropdownMenu href="/about" title="About">
+            <NavLink href="/about/what-is-ninit">What is Ninit?</NavLink>
+            <NavLink href="/about/team">About the Team</NavLink>
+            <NavLink href="/about/projects">Projects</NavLink>
+            <NavLink href="/about/news">News+Community</NavLink>
+          </DropdownMenu>
+        </li>
+        <li>
+          <DropdownMenu href="/community" title="Community">
+            <NavLink href="https://discord.gg/your-server-invite-link" >Discord</NavLink>
+            <NavLink href="https://twitter.com/your-twitter-handle">Twitter</NavLink>
+            <NavLink href="https://t.me/your-telegram-channel">Telegram</NavLink>
+            <NavLink href="/community/events">Events</NavLink>
+          </DropdownMenu>
+        </li>
+        <li>
+          <DropdownMenu href="/resources" title="Resources">
+            <NavLink href="/resources/documentation">Documentation</NavLink>
+            <NavLink href="/resources/litepaper">Litepaper</NavLink>
+            <NavLink href="/resources/academy">Academy</NavLink>
+            <NavLink href="/resources/projects">Projects</NavLink>
+          </DropdownMenu>
+    
+
+        </li>
     </>
   );
-
+  
   return (
     <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
       <div className="navbar-start w-auto lg:w-1/2">
@@ -133,11 +96,10 @@ export const Header = () => {
         </div>
         <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6">
           <div className="flex relative w-10 h-10">
-            <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.svg" />
+            <Image alt="SE2 logo" className="cursor-pointer" fill src="/DallN.png" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold leading-tight">Scaffold-eth</span>
-            <span className="text-xs">Ethereum dev stack</span>
+            <span className="font-bold leading-tight">Ninit</span>  
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">{navLinks}</ul>

@@ -13,7 +13,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ href, title, children }) =>
   return (
     <div onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
       <NavLink href={href}>{title}</NavLink>
-      {isOpen && <div>{children}</div>}
+      {isOpen && <div style={{position: 'relative'}}>{children}</div>}
     </div>
   );
 };
